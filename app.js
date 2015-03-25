@@ -1,4 +1,4 @@
-var hellobot = require('./hellobot');
+var nyancat = require('./nyancat');
 var express = require('express');
 var bodyParser = require('body-parser');
 
@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // test route
 app.get('/', function (req, res) { res.status(200).send('Hello world!') });
-app.post('/hello', hellobot);
+app.post('/hello', nyancat);
 // error handler
 app.use(function (err, req, res, next) {
   console.error(err.stack);
