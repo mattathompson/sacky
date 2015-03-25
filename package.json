@@ -1,0 +1,15 @@
+{
+  "name": "sacky",
+  "version": "1.0.0",
+  "dependencies" : {
+      "express": "^4.x.x",
+      "body-parser": "^1.x.x"
+    },
+  "description": "Nyancat bot for Slack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matthew Thompson",
+  "license": "ISC"
+}
