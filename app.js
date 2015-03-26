@@ -15,10 +15,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // test route
 app.get('/', function (req, res) { res.status(200).send('Hello world!') });
 app.post('/hello', nyancat);
+
+// Not sure if this works but it could be funny at some point.
 app.post('/yesman',function(req,res) {
 
     var reply = slack.respond(req.body,function(hook) {
-
+      Hook = hook.user_name
         return {
             text: 'Good point, ' + hook.user_name,
             username: '#yesman',
@@ -26,9 +28,22 @@ app.post('/yesman',function(req,res) {
         };
 
     });
+    var replyForIngrid = slack.respond(req.body,function(hook){
+      Hook = hook.user_name
+      return {
+        text: 'Seriously Ingrid, you can suck it.',
+        username: '#yesman',
+        channel: '#general'
+      };
 
-    res.json(reply);
+    });
 
+    if (Hook === "ing") {
+      res.json(replyForIngrid);
+    }
+    else {
+      res.json(reply);
+    }
 });
 
 
