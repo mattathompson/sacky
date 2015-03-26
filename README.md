@@ -7,3 +7,6 @@ npm install body-parser
 npm install node-slack
 
 Start the local server with: node app
+
+When you have the local server started you can test out your actions by running curl commands to the local server.
+ex -> 'curl -X POST --data "user_name=matt" http://localhost:3000/yesman'
