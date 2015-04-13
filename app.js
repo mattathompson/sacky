@@ -34,7 +34,7 @@ app.post('/yesman',function(req,res) {
         text: 'Seriously Ingrid, you can suck it.',
         username: '#yesman',
         channel: '#general',
-        icon_emoji: ':suspect:'
+        icon_emoji: ':fu:'
       };
 
     });
